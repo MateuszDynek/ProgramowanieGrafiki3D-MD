@@ -22,11 +22,12 @@ void SimpleShapeApplication::init() {
         exit(-1);
     }
 
-    // Triangle vertices
+    // Triangle vertices with color (RGB)
     std::vector<GLfloat> triangleVertices = {
-            -0.5f, 0.0f, 0.0f,
-            0.5f, 0.0f, 0.0f,
-            0.0f, 0.5f, 0.0f};
+        -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  
+        0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  
+        0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f   
+    };
 
     // Generating the buffer and loading the triangle vertex data into it.
     GLuint v_buffer_triangle;
@@ -41,19 +42,22 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_triangle);
 
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(3 * sizeof(GLfloat)));
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-    // Rectangle vertices
+    // Rectangle vertices with color (RGB)
     std::vector<GLfloat> rectangleVertices = {
-    -0.5f, 0.0f, 0.0f, // top right point first triangle
-    0.5f, 0.0f, 0.0f, // top left point first triangle
-    0.5f, -0.5f, 0.0f, // bottom right point first triangle
-    0.5f, -0.5f, 0.0f, // bottom right point second triangle
-    -0.5f, -0.5f, 0.0f, // bottom left point second triangle
-    -0.5f, 0.0f, 0.0f, // top left point second triangle
+        -0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f,  // top right point first triangle
+        0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f,  // top left point first triangle
+        0.5f, -0.5f, 0.0f, 0.0f, 0.8f, 0.0f,  // bottom right point first triangle
+        0.5f, -0.5f, 0.0f, 0.0f, 0.8f, 0.0f,  // bottom right point second triangle
+        -0.5f, -0.5f, 0.0f, 0.0f, 0.8f, 0.0f,  // bottom left point second triangle
+        -0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f   // top left point second triangle
     };
 
     // Generating the buffer and loading the rectangle vertex data into it.
@@ -69,7 +73,10 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_rectangle);
 
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(3 * sizeof(GLfloat)));
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
