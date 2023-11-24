@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/glm-populate"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/35c087d005aa3b606571a53f1fe11fe1/glm-populate.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/96de429cec7f7ff5df8809d091960051/glm-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-subbuild/CMakeFiles/cc37d20478e1b098573626ad5a340b18/glm-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glm-populate"
+		],
+		"name" : "glm-populate"
+	}
+}

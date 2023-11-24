@@ -1,0 +1,150 @@
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-UPDATE.RULE
+setlocal
+cd C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\spdlog-src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -P C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\spdlog-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\spdlog-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\spdlog-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\5DFAA02FD221AF9B33AA79F96DFC1FA9\SPDLOG-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\spdlog-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\6DC7BDD251856B4DCA6527013882EDEB\SPDLOG-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/Debug/spdlog-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/Debug/spdlog-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\EB9AEB7CC8CBF264A36080053B6233BD\SPDLOG-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild --check-stamp-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

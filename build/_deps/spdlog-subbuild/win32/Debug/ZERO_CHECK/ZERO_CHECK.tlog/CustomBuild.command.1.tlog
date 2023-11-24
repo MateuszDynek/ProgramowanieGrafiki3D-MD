@@ -1,0 +1,10 @@
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\BUILD\_DEPS\SPDLOG-SUBBUILD\CMAKEFILES\EB9AEB7CC8CBF264A36080053B6233BD\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/spdlog-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

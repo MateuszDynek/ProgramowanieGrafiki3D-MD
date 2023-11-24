@@ -1,0 +1,10 @@
+^C:\USERS\M.DYNEK\DOCUMENTS\REPO\PROGRAMOWANIE3D\3D\SRC\APPLICATION\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build --check-stamp-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Application/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

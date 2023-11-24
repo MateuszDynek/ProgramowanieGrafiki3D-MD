@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/240b88c9fd918691ed9a86f9f46cbab3/glfw-populate.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/402d40edd20f962eaeb6bc41e7788f47/glfw-populate-complete.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-build.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-configure.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-download.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-install.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-mkdir.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-patch.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-test.rule
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-subbuild/CMakeFiles/98ddd1ca47238cd2fdaa9cd02e74525a/glfw-populate-update.rule

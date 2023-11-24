@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/eb9aeb7cc8cbf264a36080053b6233bd/spdlog-populate.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/6dc7bdd251856b4dca6527013882edeb/spdlog-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-subbuild/CMakeFiles/5dfaa02fd221af9b33aa79f96dfc1fa9/spdlog-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"spdlog-populate"
+		],
+		"name" : "spdlog-populate"
+	}
+}

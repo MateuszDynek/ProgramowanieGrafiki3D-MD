@@ -1,0 +1,400 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 18/11/2023 13:33:14.
+      Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\3.27.8\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /analyze- /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\3.27.8\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx86\\x86\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\3.27.8\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:02.77
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/3.27.8/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 18/11/2023 13:33:17.
+      Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\3.27.8\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /analyze- /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\3.27.8\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx86\\x86\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\3.27.8\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.90
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/3.27.8/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-6jrrkn"
+      binary: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-6jrrkn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-6jrrkn'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_c9fbe.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 18/11/2023 13:33:18.
+        Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jrrkn\\cmTC_c9fbe.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c9fbe.dir\\Debug\\".
+          Creating directory "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jrrkn\\Debug\\".
+          Creating directory "cmTC_c9fbe.dir\\Debug\\cmTC_c9fbe.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c9fbe.dir\\Debug\\cmTC_c9fbe.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c9fbe.dir\\Debug\\\\" /Fd"cmTC_c9fbe.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c9fbe.dir\\Debug\\\\" /Fd"cmTC_c9fbe.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jrrkn\\Debug\\cmTC_c9fbe.exe" /INCREMENTAL /ILK:"cmTC_c9fbe.dir\\Debug\\cmTC_c9fbe.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-6jrrkn/Debug/cmTC_c9fbe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-6jrrkn/Debug/cmTC_c9fbe.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c9fbe.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_c9fbe.vcxproj -> C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jrrkn\\Debug\\cmTC_c9fbe.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c9fbe.dir\\Debug\\cmTC_c9fbe.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c9fbe.dir\\Debug\\cmTC_c9fbe.tlog\\cmTC_c9fbe.lastbuildstate".
+        Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jrrkn\\cmTC_c9fbe.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.91
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-w2ek5n"
+      binary: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-w2ek5n"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-w2ek5n'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_03e2c.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 18/11/2023 13:33:20.
+        Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w2ek5n\\cmTC_03e2c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_03e2c.dir\\Debug\\".
+          Creating directory "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w2ek5n\\Debug\\".
+          Creating directory "cmTC_03e2c.dir\\Debug\\cmTC_03e2c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_03e2c.dir\\Debug\\cmTC_03e2c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_03e2c.dir\\Debug\\\\" /Fd"cmTC_03e2c.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCCompilerABI.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_03e2c.dir\\Debug\\\\" /Fd"cmTC_03e2c.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w2ek5n\\Debug\\cmTC_03e2c.exe" /INCREMENTAL /ILK:"cmTC_03e2c.dir\\Debug\\cmTC_03e2c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-w2ek5n/Debug/cmTC_03e2c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-w2ek5n/Debug/cmTC_03e2c.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_03e2c.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_03e2c.vcxproj -> C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w2ek5n\\Debug\\cmTC_03e2c.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_03e2c.dir\\Debug\\cmTC_03e2c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_03e2c.dir\\Debug\\cmTC_03e2c.tlog\\cmTC_03e2c.lastbuildstate".
+        Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w2ek5n\\cmTC_03e2c.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.90
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build/_deps/glfw-src/CMakeLists.txt:56 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-uqzgk7"
+      binary: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-uqzgk7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+      CMAKE_MODULE_PATH: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-src/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-uqzgk7'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_f86a3.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 18/11/2023 13:34:11.
+        Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\cmTC_f86a3.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f86a3.dir\\Debug\\".
+          Creating directory "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\Debug\\".
+          Creating directory "cmTC_f86a3.dir\\Debug\\cmTC_f86a3.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f86a3.dir\\Debug\\cmTC_f86a3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_f86a3.dir\\Debug\\\\" /Fd"cmTC_f86a3.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          src.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_f86a3.dir\\Debug\\\\" /Fd"cmTC_f86a3.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\src.c"
+        C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\src.c(1,1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\cmTC_f86a3.vcxproj]
+        Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\cmTC_f86a3.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\cmTC_f86a3.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\src.c(1,1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uqzgk7\\cmTC_f86a3.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.68
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "build/_deps/glfw-src/CMakeLists.txt:56 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-0ajdn9"
+      binary: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-0ajdn9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+      CMAKE_MODULE_PATH: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-src/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-0ajdn9'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_c2fbd.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 18/11/2023 13:34:12.
+        Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\cmTC_c2fbd.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c2fbd.dir\\Debug\\".
+          Creating directory "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\Debug\\".
+          Creating directory "cmTC_c2fbd.dir\\Debug\\cmTC_c2fbd.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c2fbd.dir\\Debug\\cmTC_c2fbd.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_c2fbd.dir\\Debug\\\\" /Fd"cmTC_c2fbd.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckFunctionExists.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_c2fbd.dir\\Debug\\\\" /Fd"cmTC_c2fbd.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\Debug\\cmTC_c2fbd.exe" /INCREMENTAL /ILK:"cmTC_c2fbd.dir\\Debug\\cmTC_c2fbd.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-0ajdn9/Debug/cmTC_c2fbd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-0ajdn9/Debug/cmTC_c2fbd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c2fbd.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\cmTC_c2fbd.vcxproj]
+        Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\cmTC_c2fbd.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\cmTC_c2fbd.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0ajdn9\\cmTC_c2fbd.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.66
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "build/_deps/glfw-src/CMakeLists.txt:56 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-tw8vz7"
+      binary: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-tw8vz7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+      CMAKE_MODULE_PATH: "C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-src/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-tw8vz7'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_0d0ff.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 18/11/2023 13:34:13.
+        Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\cmTC_0d0ff.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_0d0ff.dir\\Debug\\".
+          Creating directory "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\Debug\\".
+          Creating directory "cmTC_0d0ff.dir\\Debug\\cmTC_0d0ff.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_0d0ff.dir\\Debug\\cmTC_0d0ff.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_0d0ff.dir\\Debug\\\\" /Fd"cmTC_0d0ff.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckFunctionExists.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_0d0ff.dir\\Debug\\\\" /Fd"cmTC_0d0ff.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\Debug\\cmTC_0d0ff.exe" /INCREMENTAL /ILK:"cmTC_0d0ff.dir\\Debug\\cmTC_0d0ff.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-tw8vz7/Debug/cmTC_0d0ff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/CMakeFiles/CMakeScratch/TryCompile-tw8vz7/Debug/cmTC_0d0ff.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_0d0ff.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\cmTC_0d0ff.vcxproj]
+        Done Building Project "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\cmTC_0d0ff.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\cmTC_0d0ff.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\m.dynek\\Documents\\Repo\\Programowanie3D\\3d\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tw8vz7\\cmTC_0d0ff.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 1
+...

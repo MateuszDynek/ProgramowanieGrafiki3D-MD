@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\ColorMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\mesh_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\PhongMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\stb_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\ColorMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\mesh_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\PhongMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\lights.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\XeEngine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\glad.dir\$(Configuration)\gl.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D238DAE9-B2BB-3C42-A87E-5B4DA43014A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{500021D7-3CC0-3416-82C2-F7FEEB86DBE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4AFDDAE0-61A6-3B21-986C-93FFB738855F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

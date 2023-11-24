@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-subbuild\CMakeFiles\35c087d005aa3b606571a53f1fe11fe1\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{24BEADAA-AC66-3D08-82DB-2496C39B000E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

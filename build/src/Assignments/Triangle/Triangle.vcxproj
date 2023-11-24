@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3E764DB-D931-3F26-9EDA-2D9F6F6A5E74}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Platform>win32</Platform>
+    <ProjectName>Triangle</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Triangle.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Triangle</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Triangle.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Triangle</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Triangle.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Triangle</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Triangle.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Triangle</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME="Triangle";PROJECT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME=\"Triangle\";PROJECT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\Application\Debug\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/Debug/Triangle.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/Debug/Triangle.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME="Triangle";PROJECT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME=\"Triangle\";PROJECT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\Application\Release\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/Release/Triangle.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/Release/Triangle.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME="Triangle";PROJECT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME=\"Triangle\";PROJECT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\Application\MinSizeRel\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/MinSizeRel/Triangle.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/MinSizeRel/Triangle.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME="Triangle";PROJECT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;PROJECT_NAME=\"Triangle\";PROJECT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-src\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\Application\RelWithDebInfo\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/RelWithDebInfo/Triangle.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/RelWithDebInfo/Triangle.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\Triangle\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build --check-stamp-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build --check-stamp-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build --check-stamp-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/src/Assignments/Triangle/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d -BC:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build --check-stamp-file C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangle/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\Triangle\main.cpp" />
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\Triangle\app.h" />
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\Triangle\app.cpp" />
+    <Object Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\glad.dir\$(Configuration)\gl.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\ZERO_CHECK.vcxproj">
+      <Project>{C1086A46-4891-36FF-B911-F3440283E0A7}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Application\application.vcxproj">
+      <Project>{1A3EEF9C-4232-3712-985F-31DF15D67691}</Project>
+      <Name>application</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\glad.vcxproj">
+      <Project>{F51A0A08-DA9B-34F0-A76C-0F1EA6C40F39}</Project>
+      <Name>glad</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-build\src\glfw.vcxproj">
+      <Project>{90EFEBA9-2853-3CC0-8001-87D643622B9F}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
