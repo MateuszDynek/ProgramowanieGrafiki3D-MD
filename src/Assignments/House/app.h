@@ -21,5 +21,6 @@ public:
     void frame() override;
 
 private:
-    GLuint vao_;
+    GLuint vao_triangle_;
+    GLuint vao_rectangle_;
 };

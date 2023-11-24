@@ -22,69 +22,76 @@ void SimpleShapeApplication::init() {
         exit(-1);
     }
 
-    // A vector containing the x,y,z vertex coordinates for the triangle.
-    std::vector<GLfloat> vertices = {
+    // Triangle vertices
+    std::vector<GLfloat> triangleVertices = {
             -0.5f, 0.0f, 0.0f,
             0.5f, 0.0f, 0.0f,
             0.0f, 0.5f, 0.0f};
-    std::vector<GLfloat> vertices2 = {
-            -0.5f, -0.5f, 0.0f,
-            0.5f, -0.5f, 0.0f,
-            0.5f, 0.5f, 0.0f,
-            -0.5f, 0.5f, 0.0f};
 
-    // Generating the buffer and loading the vertex data into it.
-    GLuint v_buffer_handle;
-    glGenBuffers(1, &v_buffer_handle);
-    OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle));
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
+    // Generating the buffer and loading the triangle vertex data into it.
+    GLuint v_buffer_triangle;
+    glGenBuffers(1, &v_buffer_triangle);
+    OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_triangle));
+    glBufferData(GL_ARRAY_BUFFER, triangleVertices.size() * sizeof(GLfloat), triangleVertices.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-    GLuint v_buffer_handle2;
-    glGenBuffers(1, &v_buffer_handle2);
-    OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle2));
-    glBufferData(GL_ARRAY_BUFFER, vertices2.size() * sizeof(GLfloat), vertices2.data(), GL_STATIC_DRAW);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    // This setups a Vertex Array Object (VAO) that  encapsulates
-    // the state of all vertex buffers needed for rendering
-    glGenVertexArrays(1, &vao_);
-    glBindVertexArray(vao_);
-    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
-
-    glGenVertexArrays(1, &vao_);
-    glBindVertexArray(vao_);
-    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle2);
-
-    // This indicates that the data for attribute 0 should be read from a vertex buffer.
-    glEnableVertexAttribArray(0);
-    // and this specifies how the data is layout in the buffer.
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+    // Setting up the VAO for the triangle
+    glGenVertexArrays(1, &vao_triangle_);
+    glBindVertexArray(vao_triangle_);
+    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_triangle);
 
     glEnableVertexAttribArray(0);
-    // and this specifies how the data is layout in the buffer.
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-    //end of vao "recording"
 
-    // Setting the background color of the rendering window,
-    // I suggest not to use white or black for better debuging.
+    // Rectangle vertices
+    std::vector<GLfloat> rectangleVertices = {
+    -0.5f, 0.0f, 0.0f, // top right point first triangle
+    0.5f, 0.0f, 0.0f, // top left point first triangle
+    0.5f, -0.5f, 0.0f, // bottom right point first triangle
+    0.5f, -0.5f, 0.0f, // bottom right point second triangle
+    -0.5f, -0.5f, 0.0f, // bottom left point second triangle
+    -0.5f, 0.0f, 0.0f, // top left point second triangle
+    };
+
+    // Generating the buffer and loading the rectangle vertex data into it.
+    GLuint v_buffer_rectangle;
+    glGenBuffers(1, &v_buffer_rectangle);
+    OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_rectangle));
+    glBufferData(GL_ARRAY_BUFFER, rectangleVertices.size() * sizeof(GLfloat), rectangleVertices.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    // Setting up the VAO for the rectangle
+    glGenVertexArrays(1, &vao_rectangle_);
+    glBindVertexArray(vao_rectangle_);
+    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_rectangle);
+
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+
+    // Setting the background color of the rendering window
     glClearColor(0.81f, 0.81f, 0.8f, 1.0f);
 
-    // This setups an OpenGL vieport of the size of the whole rendering window.
-    auto[w, h] = frame_buffer_size();
+    // Setting up an OpenGL viewport of the size of the whole rendering window
+    auto [w, h] = frame_buffer_size();
     glViewport(0, 0, w, h);
 
     glUseProgram(program);
 }
 
-//This functions is called every frame and does the actual rendering.
 void SimpleShapeApplication::frame() {
-    // Binding the VAO will setup all the required vertex buffers.
-    glBindVertexArray(vao_);
+    // Rendering the triangle
+    glBindVertexArray(vao_triangle_);
     glDrawArrays(GL_TRIANGLES, 0, 3);
-    glDrawArrays(GL_QUADS, 0, 3);
+    glBindVertexArray(0);
+
+    // Rendering the rectangle
+    glBindVertexArray(vao_rectangle_);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
     glBindVertexArray(0);
 }
