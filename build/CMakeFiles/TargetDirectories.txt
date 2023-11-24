@@ -32,3 +32,6 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Triangl
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/House/CMakeFiles/House.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/House/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/House/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Colors/CMakeFiles/Colors.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Colors/CMakeFiles/INSTALL.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Colors/CMakeFiles/ALL_BUILD.dir

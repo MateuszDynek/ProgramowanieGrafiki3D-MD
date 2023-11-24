@@ -173,6 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Colors\Colors.vcxproj">
+      <Project>{2D628F79-75A2-30CF-BB63-C46DA5274DC2}</Project>
+      <Name>Colors</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\House\House.vcxproj">
       <Project>{D795B97F-6727-306F-833B-7453C2433B01}</Project>
       <Name>House</Name>
