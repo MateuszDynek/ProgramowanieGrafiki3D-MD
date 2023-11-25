@@ -181,6 +181,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{D795B97F-6727-306F-833B-7453C2433B01}</Project>
       <Name>House</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Indices\Indices.vcxproj">
+      <Project>{7BB1632E-4839-3EDE-B29D-B0C9157A9B92}</Project>
+      <Name>Indices</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\Triangle.vcxproj">
       <Project>{A3E764DB-D931-3F26-9EDA-2D9F6F6A5E74}</Project>
       <Name>Triangle</Name>
