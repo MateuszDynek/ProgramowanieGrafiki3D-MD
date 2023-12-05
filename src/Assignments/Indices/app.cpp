@@ -60,12 +60,29 @@ void SimpleShapeApplication::init() {
         -0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f   // top left point second triangle
     };
 
+    // All house vertices with color (RGB)
+    std::vector<GLfloat> allHouseVertices = {
+        -0.5f, -0.5f, 0.0f, 0.0f, 0.8f, 0.0f,  // bottom left point of house base
+        0.5f, -0.5f, 0.0f, 0.0f, 0.8f, 0.0f,  // bottom right point of house base
+        -0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f,  // top left point of house base
+        0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f,  // top middle point of house roof
+        0.5f, -0.5f, 0.0f, 0.0f, 0.8f, 0.0f,  // bottom right point of house base
+        0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f   // top right point of house base
+    };
+
     // Generating the buffer and loading the rectangle vertex data into it.
     GLuint v_buffer_rectangle;
     glGenBuffers(1, &v_buffer_rectangle);
     OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_rectangle));
-    glBufferData(GL_ARRAY_BUFFER, rectangleVertices.size() * sizeof(GLfloat), rectangleVertices.data(), GL_STATIC_DRAW);
+    // glBufferData(GL_ARRAY_BUFFER, rectangleVertices.size() * sizeof(GLfloat), rectangleVertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, allHouseVertices.size() * sizeof(GLfloat), allHouseVertices.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    std::vector<GLushort> indices={0,1,2,3,4,2,3,5,1};
+    glGenBuffers(1, &elementbuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
+
 
     // Setting up the VAO for the rectangle
     glGenVertexArrays(1, &vao_rectangle_);
@@ -93,12 +110,18 @@ void SimpleShapeApplication::init() {
 
 void SimpleShapeApplication::frame() {
     // Rendering the triangle
-    glBindVertexArray(vao_triangle_);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
-    glBindVertexArray(0);
+    // glBindVertexArray(vao_triangle_);
+    // glDrawArrays(GL_TRIANGLES, 0, 3);
+    // glBindVertexArray(0);
 
     // Rendering the rectangle
+    // glBindVertexArray(vao_rectangle_);
+    // glDrawArrays(GL_TRIANGLES, 0, 6);
+    // glBindVertexArray(0);
+    // Rendering all house
     glBindVertexArray(vao_rectangle_);
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+    glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_SHORT, nullptr);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }

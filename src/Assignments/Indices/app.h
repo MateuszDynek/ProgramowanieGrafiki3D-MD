@@ -23,4 +23,5 @@ public:
 private:
     GLuint vao_triangle_;
     GLuint vao_rectangle_;
+    GLuint elementbuffer;
 };
