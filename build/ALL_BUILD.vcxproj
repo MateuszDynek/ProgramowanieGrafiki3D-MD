@@ -189,6 +189,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{A3E764DB-D931-3F26-9EDA-2D9F6F6A5E74}</Project>
       <Name>Triangle</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Uniforms\Uniforms.vcxproj">
+      <Project>{4E9E30D3-6FCD-39D1-8018-4FFBCEBCE650}</Project>
+      <Name>Uniforms</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Application\application.vcxproj">
       <Project>{1A3EEF9C-4232-3712-985F-31DF15D67691}</Project>
       <Name>application</Name>
