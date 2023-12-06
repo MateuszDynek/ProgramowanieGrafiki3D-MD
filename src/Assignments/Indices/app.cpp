@@ -79,8 +79,8 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     std::vector<GLushort> indices={0,1,2,3,4,2,3,5,1};
-    glGenBuffers(1, &elementbuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+    glGenBuffers(1, &vao_allHouse);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vao_allHouse);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
 
 
@@ -120,7 +120,7 @@ void SimpleShapeApplication::frame() {
     // glBindVertexArray(0);
     // Rendering all house
     glBindVertexArray(vao_rectangle_);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vao_allHouse);
     glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_SHORT, nullptr);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);

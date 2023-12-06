@@ -7,6 +7,8 @@
 #include <iostream>
 #include <vector>
 #include <tuple>
+#include "glm/glm.hpp"
+#include "glm/gtc/constants.hpp"
 
 #include "Application/utils.h"
 
@@ -79,9 +81,40 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     std::vector<GLushort> indices={0,1,2,3,4,2,3,5,1};
-    glGenBuffers(1, &elementbuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+    glGenBuffers(1, &vao_allHouse);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vao_allHouse);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
+
+    GLuint ubo_modifier;
+    glGenBuffers(1, &ubo_modifier);
+    glBindBuffer(GL_UNIFORM_BUFFER, ubo_modifier);
+    glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 0, ubo_modifier);
+
+    // Load data into the buffer
+    float strength = 1.5f; 
+    float color[3] = {1.0f, 0.2f, 1.0f};
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(float), &strength);
+    glBufferSubData(GL_UNIFORM_BUFFER, 16, 3 * sizeof(float), &color);
+
+    // Create and bind the uniform buffer for Transformations interface block
+    GLuint ubo_transformations;
+    glGenBuffers(1, &ubo_transformations);
+    glBindBuffer(GL_UNIFORM_BUFFER, ubo_transformations);
+    glBufferData(GL_UNIFORM_BUFFER, 48, nullptr, GL_STATIC_DRAW); // Allocate 48 bytes for the buffer
+    glBindBufferBase(GL_UNIFORM_BUFFER, 1, ubo_transformations);
+
+    // Load data into the buffer
+    float theta = 1.0 * glm::pi<float>() / 6.0f;
+    auto cs = std::cos(theta);
+    auto ss = std::sin(theta);
+    glm::mat2 rotation{ cs, ss, -ss, cs };
+    glm::vec2 translation{ 0.0, -0.25 };
+    glm::vec2 scale{ 0.5, 0.5 };
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::vec2), &scale);
+    glBufferSubData(GL_UNIFORM_BUFFER, 8, sizeof(glm::vec2), &translation);
+    glBufferSubData(GL_UNIFORM_BUFFER, 16, sizeof(glm::mat2), &rotation[0]);
+    glBufferSubData(GL_UNIFORM_BUFFER, 32, sizeof(glm::mat2), &rotation[1]);
 
 
     // Setting up the VAO for the rectangle
@@ -120,7 +153,7 @@ void SimpleShapeApplication::frame() {
     // glBindVertexArray(0);
     // Rendering all house
     glBindVertexArray(vao_rectangle_);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vao_allHouse);
     glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_SHORT, nullptr);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
