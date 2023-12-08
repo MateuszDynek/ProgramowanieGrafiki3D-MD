@@ -1,0 +1,1 @@
+Z moich obliczeń wynika iż zaoszczędzimy 96 bajtów.
