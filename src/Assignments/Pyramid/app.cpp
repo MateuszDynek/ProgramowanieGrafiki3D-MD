@@ -73,15 +73,43 @@ void SimpleShapeApplication::init() {
         0.5f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f   // top right point of house base
     };
 
+    // All pyramid vertices with color (RGB)
+    std::vector<GLfloat> pyramidVertices = {
+        -0.5f, 0.0f, 0.5f, 0.8f ,0.0f ,0.0f,
+        0.5f, 0.0f, 0.5f, 0.8f ,0.0f ,0.0f,
+        0.0f, 1.0f, 0.0f, 0.8f ,0.0f ,0.0f,
+
+        0.5f, 0.0f, 0.5f, 0.0f ,0.8f ,0.0f,
+        0.5f, 0.0f, -0.5f, 0.0f ,0.8f ,0.0f,
+        0.0f, 1.0f, 0.0f, 0.0f ,0.8f ,0.0f,
+
+        0.5f, 0.0f, -0.5f, 0.0f ,0.0f ,0.8f,
+        -0.5f, 0.0f, -0.5f, 0.0f ,0.0f ,0.8f,
+        0.0f, 1.0f, 0.0f, 0.0f ,0.0f ,0.8f,
+
+        -0.5f, 0.0f, -0.5f, 0.2f ,0.2f ,0.0f,
+        -0.5f, 0.0f, 0.5f, 0.2f ,0.2f ,0.0f,
+        0.0f, 1.0f, 0.0f, 0.2f ,0.2f ,0.0f,
+
+        0.5f, 0.0f, -0.5f, 0.0f ,0.4f ,0.4f,
+        0.5f, 0.0f, 0.5f, 0.0f ,0.4f ,0.4f,
+        -0.5f, 0.0f, 0.5f, 0.0f ,0.4f ,0.4f,
+        
+        -0.5f, 0.0f, 0.5f, 0.0f ,0.4f ,0.4f,
+        -0.5f, 0.0f, -0.5f, 0.0f ,0.4f ,0.4f,
+        0.5f, 0.0f, -0.5f, 0.0f ,0.4f ,0.4f
+        
+    };
+
     // Generating the buffer and loading the rectangle vertex data into it.
     GLuint v_buffer_rectangle;
     glGenBuffers(1, &v_buffer_rectangle);
     OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_rectangle));
     // glBufferData(GL_ARRAY_BUFFER, rectangleVertices.size() * sizeof(GLfloat), rectangleVertices.data(), GL_STATIC_DRAW);
-    glBufferData(GL_ARRAY_BUFFER, allHouseVertices.size() * sizeof(GLfloat), allHouseVertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, pyramidVertices.size() * sizeof(GLfloat), pyramidVertices.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-    std::vector<GLushort> indices={0,1,2,3,4,2,3,5,1};
+    std::vector<GLushort> indices={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
     glGenBuffers(1, &vao_allHouse);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vao_allHouse);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
@@ -94,7 +122,7 @@ void SimpleShapeApplication::init() {
 
     // Load data into the buffer
     float strength = 1.5f; 
-    float color[3] = {1.0f, 0.2f, 1.0f};
+    float color[3] = {1.0f, 1.0f, 1.0f};
     glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(float), &strength);
     glBufferSubData(GL_UNIFORM_BUFFER, 16, 3 * sizeof(float), &color);
 
@@ -108,7 +136,7 @@ void SimpleShapeApplication::init() {
     auto [w, h] = frame_buffer_size();
     // Load data into the buffer
     glm::mat4 model = glm::mat4(1.0f);
-    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 view = glm::lookAt(glm::vec3(3.0f, 11.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), static_cast<float>(w) / h, 0.1f, 100.0f);
     glm::mat4 PVM = projection * view * model;
     glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &PVM[0][0]);
@@ -149,9 +177,11 @@ void SimpleShapeApplication::frame() {
     // glDrawArrays(GL_TRIANGLES, 0, 6);
     // glBindVertexArray(0);
     // Rendering all house
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
     glBindVertexArray(vao_rectangle_);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vao_allHouse);
-    glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_SHORT, nullptr);
+    glDrawElements(GL_TRIANGLES, 18, GL_UNSIGNED_SHORT, nullptr);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
