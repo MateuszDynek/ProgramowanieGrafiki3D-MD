@@ -41,3 +41,6 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Indices
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Uniforms/CMakeFiles/Uniforms.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Uniforms/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Uniforms/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/PVM/CMakeFiles/PVM.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/PVM/CMakeFiles/INSTALL.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/PVM/CMakeFiles/ALL_BUILD.dir
