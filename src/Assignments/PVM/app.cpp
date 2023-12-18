@@ -9,6 +9,7 @@
 #include <tuple>
 #include "glm/glm.hpp"
 #include "glm/gtc/constants.hpp"
+#include "glm/gtc/matrix_transform.hpp"
 
 #include "Application/utils.h"
 
@@ -101,20 +102,16 @@ void SimpleShapeApplication::init() {
     GLuint ubo_transformations;
     glGenBuffers(1, &ubo_transformations);
     glBindBuffer(GL_UNIFORM_BUFFER, ubo_transformations);
-    glBufferData(GL_UNIFORM_BUFFER, 48, nullptr, GL_STATIC_DRAW); // Allocate 48 bytes for the buffer
+    glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), nullptr, GL_STATIC_DRAW); // Allocate 64 bytes for the mat4
     glBindBufferBase(GL_UNIFORM_BUFFER, 1, ubo_transformations);
 
+    auto [w, h] = frame_buffer_size();
     // Load data into the buffer
-    float theta = 1.0 * glm::pi<float>() / 6.0f;
-    auto cs = std::cos(theta);
-    auto ss = std::sin(theta);
-    glm::mat2 rotation{ cs, ss, -ss, cs };
-    glm::vec2 translation{ 0.0, -0.25 };
-    glm::vec2 scale{ 0.5, 0.5 };
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::vec2), &scale);
-    glBufferSubData(GL_UNIFORM_BUFFER, 8, sizeof(glm::vec2), &translation);
-    glBufferSubData(GL_UNIFORM_BUFFER, 16, sizeof(glm::mat2), &rotation[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER, 32, sizeof(glm::mat2), &rotation[1]);
+    glm::mat4 model = glm::mat4(1.0f);
+    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), static_cast<float>(w) / h, 0.1f, 100.0f);
+    glm::mat4 PVM = projection * view * model;
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &PVM[0][0]);
 
 
     // Setting up the VAO for the rectangle
@@ -135,7 +132,7 @@ void SimpleShapeApplication::init() {
     glClearColor(0.81f, 0.81f, 0.8f, 1.0f);
 
     // Setting up an OpenGL viewport of the size of the whole rendering window
-    auto [w, h] = frame_buffer_size();
+    
     glViewport(0, 0, w, h);
 
     glUseProgram(program);
