@@ -115,7 +115,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\Application\Debug\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\..\_deps\glm-build\glm\Debug\glm.lib;..\..\Application\Debug\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\..\_deps\glm-build\glm\Debug\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -159,7 +159,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\Application\Release\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\..\_deps\glm-build\glm\Release\glm.lib;..\..\Application\Release\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\..\_deps\glm-build\glm\Release\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -203,7 +203,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\Application\MinSizeRel\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\..\_deps\glm-build\glm\MinSizeRel\glm.lib;..\..\Application\MinSizeRel\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\..\_deps\glm-build\glm\MinSizeRel\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -246,7 +246,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\Application\RelWithDebInfo\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\..\_deps\glm-build\glm\RelWithDebInfo\glm.lib;..\..\Application\RelWithDebInfo\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\..\_deps\glm-build\glm\RelWithDebInfo\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -342,6 +342,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-build\src\glfw.vcxproj">
       <Project>{90EFEBA9-2853-3CC0-8001-87D643622B9F}</Project>
       <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-build\glm\glm.vcxproj">
+      <Project>{CED89B78-D1A4-3B43-90BE-DA84E8EB0C3C}</Project>
+      <Name>glm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

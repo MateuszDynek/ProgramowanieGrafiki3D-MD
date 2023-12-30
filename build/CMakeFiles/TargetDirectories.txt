@@ -10,6 +10,7 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-build/src/CM
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glfw-build/src/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-build/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-build/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-build/glm/CMakeFiles/glm.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/glm-build/glm/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-build/CMakeFiles/spdlog.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/_deps/spdlog-build/CMakeFiles/INSTALL.dir
@@ -47,3 +48,6 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/PVM/CMa
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Pyramid/CMakeFiles/Pyramid.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Pyramid/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Pyramid/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/Zoom.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/INSTALL.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/ALL_BUILD.dir

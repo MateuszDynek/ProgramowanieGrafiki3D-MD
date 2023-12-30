@@ -201,6 +201,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{4E9E30D3-6FCD-39D1-8018-4FFBCEBCE650}</Project>
       <Name>Uniforms</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Zoom\Zoom.vcxproj">
+      <Project>{9C534B3D-4E89-3647-AF75-C097C89E870A}</Project>
+      <Name>Zoom</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Application\application.vcxproj">
       <Project>{1A3EEF9C-4232-3712-985F-31DF15D67691}</Project>
       <Name>application</Name>
@@ -218,6 +222,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glfw-build\src\glfw.vcxproj">
       <Project>{90EFEBA9-2853-3CC0-8001-87D643622B9F}</Project>
       <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-build\glm\glm.vcxproj">
+      <Project>{CED89B78-D1A4-3B43-90BE-DA84E8EB0C3C}</Project>
+      <Name>glm</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\ObjectReader\objreader.vcxproj">
       <Project>{8A058634-4C6C-3C5D-91DF-6AE48D5CCFC5}</Project>

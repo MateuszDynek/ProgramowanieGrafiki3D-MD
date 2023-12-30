@@ -294,6 +294,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{90EFEBA9-2853-3CC0-8001-87D643622B9F}</Project>
       <Name>glfw</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-build\glm\glm.vcxproj">
+      <Project>{CED89B78-D1A4-3B43-90BE-DA84E8EB0C3C}</Project>
+      <Name>glm</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
