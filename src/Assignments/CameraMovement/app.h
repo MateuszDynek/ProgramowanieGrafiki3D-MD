@@ -11,6 +11,7 @@
 
 #include "glad/gl.h"
 #include "camera.h"
+#include "camera_controler.h"
 
 class SimpleShapeApplication : public xe::Application
 {
@@ -34,8 +35,15 @@ private:
     Camera *camera_;
     glm::mat4 model;
     GLuint v_buffer_transformation;
+    CameraControler *controler_;
 
     void framebuffer_resize_callback(int w, int h) override;
 
     void scroll_callback(double xoffset, double yoffset) override;
+
+    void set_controler(CameraControler *controler) { controler_ = controler; }
+
+    void mouse_button_callback(int button, int action, int mods) override;
+
+    void cursor_position_callback(double x, double y) override;
 };
