@@ -173,6 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\CameraMovement\CameraMovement.vcxproj">
+      <Project>{9397369B-E8A9-3DDC-BE27-79F0E6099690}</Project>
+      <Name>CameraMovement</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Colors\Colors.vcxproj">
       <Project>{2D628F79-75A2-30CF-BB63-C46DA5274DC2}</Project>
       <Name>Colors</Name>

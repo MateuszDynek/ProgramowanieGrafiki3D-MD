@@ -54,3 +54,6 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Resizin
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/Zoom.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/CameraMovement/CMakeFiles/CameraMovement.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/CameraMovement/CMakeFiles/INSTALL.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/CameraMovement/CMakeFiles/ALL_BUILD.dir
