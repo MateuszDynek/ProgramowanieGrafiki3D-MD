@@ -10,6 +10,7 @@
 #include "Application/utils.h"
 
 #include "glad/gl.h"
+#include "camera.h"
 
 class SimpleShapeApplication : public xe::Application
 {
@@ -20,6 +21,21 @@ public:
 
     void frame() override;
 
+    void set_camera(Camera *camera) { camera_ = camera; }
+    Camera *camera() { return camera_; }
+    ~SimpleShapeApplication() {
+        if (camera_) {
+            delete camera_;
+        }
+    }
+
 private:
     GLuint vao_pyramid_;
+    Camera *camera_;
+    glm::mat4 model;
+    GLuint v_buffer_transformation;
+
+    void framebuffer_resize_callback(int w, int h) override;
+
+    void scroll_callback(double xoffset, double yoffset) override;
 };

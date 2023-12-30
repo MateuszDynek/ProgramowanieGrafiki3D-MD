@@ -14,6 +14,7 @@
 #include "Application/utils.h"
 
 void SimpleShapeApplication::init() {
+    set_camera(new Camera);
     // A utility function that reads the shader sources, compiles them and creates the program object
     // As everything in OpenGL we reference program by an integer "handle".
     auto program = xe::utils::create_program(
@@ -58,11 +59,19 @@ void SimpleShapeApplication::init() {
 
     auto [w, h] = frame_buffer_size();
 
-    glm::mat4 model = glm::mat4(1.0f);
-    glm::mat4 view = glm::lookAt(glm::vec3(2.0f, -1.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-    glm::mat4 projection = glm::perspective(glm::radians(45.0f), static_cast<float>(w) / h, 0.1f, 100.0f);
-    glm::mat4 PVM = projection * view * model;
+    model = glm::mat4(1.0f);
     std::vector<GLushort> indices={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
+
+    camera_->look_at(glm::vec3(-2.0f, -1.0f, -3.0f),
+                     glm::vec3(0.0f, 0.0f, 0.0f),
+                     glm::vec3(0.0f, 1.0f, 0.0f));
+
+    auto fov = glm::pi<float>() / 4.0;
+    auto near = 0.1f;
+    auto far = 100.0f;
+    auto aspect = (float) w / h;
+    camera_->perspective(fov, aspect, near, far);
+
 
     // Generating the buffer and loading the pyramid indices data into it.
     GLuint v_buffer_indices;
@@ -88,11 +97,9 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
     // Create and bind the uniform buffer for Transformations interface block
-    GLuint v_buffer_transformation;
     glGenBuffers(1, &v_buffer_transformation);
     OGL_CALL(glBindBuffer(GL_UNIFORM_BUFFER, v_buffer_transformation));
     glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), nullptr, GL_STATIC_DRAW); // Allocate 64 bytes for the mat4
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &PVM[0][0]);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
 
@@ -125,9 +132,24 @@ void SimpleShapeApplication::init() {
 }
 
 void SimpleShapeApplication::frame() {
+    auto pvm = camera_->projection() * camera_->view() * model;
+    glBindBuffer(GL_UNIFORM_BUFFER, v_buffer_transformation);
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &pvm[0]);
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
     glBindVertexArray(vao_pyramid_);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     glDrawElements(GL_TRIANGLES, 18, GL_UNSIGNED_SHORT, reinterpret_cast<GLvoid *>(0));
     glBindVertexArray(0);
+}
+void SimpleShapeApplication::framebuffer_resize_callback(int w, int h) {
+    Application::framebuffer_resize_callback(w, h);
+    glViewport(0, 0, w, h);
+    camera_->set_aspect((float) w / h);
+}
+
+void SimpleShapeApplication::scroll_callback(double xoffset, double yoffset) {
+    Application::scroll_callback(xoffset, yoffset);
+    camera()->zoom(yoffset / 30.0f);
 }
