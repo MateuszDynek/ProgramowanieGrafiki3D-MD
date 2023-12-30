@@ -28,14 +28,21 @@ public:
             delete camera_;
         }
     }
-
-private:
-    GLuint vao_pyramid_;
-    Camera *camera_;
-    glm::mat4 model;
-    GLuint v_buffer_transformation;
-
     void framebuffer_resize_callback(int w, int h) override;
 
     void scroll_callback(double xoffset, double yoffset) override;
+private:
+    GLuint vao_pyramid_;
+    Camera *camera_;
+    
+    GLuint u_pvm_buffer_;
+
+    float fov_;
+    float aspect_;
+    float near_;
+    float far_; 
+
+    glm::mat4 P_;
+    glm::mat4 V_; 
+    glm::mat4 M_;
 };
