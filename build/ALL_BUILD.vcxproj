@@ -193,6 +193,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{3318A993-0BEF-3939-AAB8-C2CF828F0D11}</Project>
       <Name>Pyramid</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Resizing\Resizing.vcxproj">
+      <Project>{9810151C-E949-3093-8AD5-02ACA1B213A7}</Project>
+      <Name>Resizing</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Triangle\Triangle.vcxproj">
       <Project>{A3E764DB-D931-3F26-9EDA-2D9F6F6A5E74}</Project>
       <Name>Triangle</Name>

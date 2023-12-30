@@ -48,6 +48,9 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/PVM/CMa
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Pyramid/CMakeFiles/Pyramid.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Pyramid/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Pyramid/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Resizing/CMakeFiles/Resizing.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Resizing/CMakeFiles/INSTALL.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Resizing/CMakeFiles/ALL_BUILD.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/Zoom.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Zoom/CMakeFiles/ALL_BUILD.dir
