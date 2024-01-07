@@ -115,7 +115,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\..\_deps\glm-build\glm\Debug\glm.lib;..\..\Application\Debug\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\..\_deps\glm-build\glm\Debug\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\..\_deps\glm-build\glm\Debug\glm.lib;..\..\Application\Debug\application.lib;..\..\XeEngine\Debug\xe-engine.lib;..\..\ObjectReader\Debug\objreader.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Debug\glfw3.lib;..\..\..\_deps\glm-build\glm\Debug\glm.lib;..\..\..\_deps\spdlog-build\Debug\spdlogd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -159,7 +159,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\..\_deps\glm-build\glm\Release\glm.lib;..\..\Application\Release\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\..\_deps\glm-build\glm\Release\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\..\_deps\glm-build\glm\Release\glm.lib;..\..\Application\Release\application.lib;..\..\XeEngine\Release\xe-engine.lib;..\..\ObjectReader\Release\objreader.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\Release\glfw3.lib;..\..\..\_deps\glm-build\glm\Release\glm.lib;..\..\..\_deps\spdlog-build\Release\spdlog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -203,7 +203,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\..\_deps\glm-build\glm\MinSizeRel\glm.lib;..\..\Application\MinSizeRel\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\..\_deps\glm-build\glm\MinSizeRel\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\..\_deps\glm-build\glm\MinSizeRel\glm.lib;..\..\Application\MinSizeRel\application.lib;..\..\XeEngine\MinSizeRel\xe-engine.lib;..\..\ObjectReader\MinSizeRel\objreader.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;..\..\..\_deps\glm-build\glm\MinSizeRel\glm.lib;..\..\..\_deps\spdlog-build\MinSizeRel\spdlog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -246,7 +246,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\..\_deps\glm-build\glm\RelWithDebInfo\glm.lib;..\..\Application\RelWithDebInfo\application.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\..\_deps\glm-build\glm\RelWithDebInfo\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\..\_deps\glm-build\glm\RelWithDebInfo\glm.lib;..\..\Application\RelWithDebInfo\application.lib;..\..\XeEngine\RelWithDebInfo\xe-engine.lib;..\..\ObjectReader\RelWithDebInfo\objreader.lib;opengl32.lib;..\..\..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;..\..\..\_deps\glm-build\glm\RelWithDebInfo\glm.lib;..\..\..\_deps\spdlog-build\RelWithDebInfo\spdlog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -346,6 +346,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-build\glm\glm.vcxproj">
       <Project>{CED89B78-D1A4-3B43-90BE-DA84E8EB0C3C}</Project>
       <Name>glm</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\ObjectReader\objreader.vcxproj">
+      <Project>{8A058634-4C6C-3C5D-91DF-6AE48D5CCFC5}</Project>
+      <Name>objreader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\spdlog-build\spdlog.vcxproj">
+      <Project>{262FB53F-D846-3F77-B50B-3BF6FCD9FD2F}</Project>
+      <Name>spdlog</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\XeEngine\xe-engine.vcxproj">
+      <Project>{128C425D-1422-3410-B589-9F7E65C0AD35}</Project>
+      <Name>xe-engine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

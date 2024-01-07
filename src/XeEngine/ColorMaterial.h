@@ -25,6 +25,12 @@ namespace xe {
 
         void set_texture(GLuint tex) { texture_ = tex; }
 
+        GLuint get_texture() { return texture_; }
+
+        void set_texture_unit(GLuint tex_unit) { texture_unit_ = tex_unit; }
+
+        GLuint get_texture_unit() { return texture_unit_; }
+
         void bind() override;
 
         void unbind() override;

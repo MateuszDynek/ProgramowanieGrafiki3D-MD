@@ -9,6 +9,7 @@ add_executable(${PROJECT_NAME}
         app.cpp
         )
         
+target_link_libraries(${PROJECT_NAME} PUBLIC xe-engine)
 target_link_libraries(${PROJECT_NAME} PUBLIC )
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 

@@ -1,7 +1,9 @@
 //
 // Created by pbialas on 25.09.2020.
 //
+#define STB_IMAGE_IMPLEMENTATION  1
 
+#include "3rdParty/stb/stb_image.h"
 #include "app.h"
 
 #include <iostream>
@@ -29,34 +31,32 @@ void SimpleShapeApplication::init() {
 
     // All pyramid vertices with color (RGB)
     std::vector<GLfloat> pyramidVertices = {
-        -0.5f, 0.0f, 0.5f, 0.8f ,0.0f ,0.0f,
-        0.5f, 0.0f, 0.5f, 0.8f ,0.0f ,0.0f,
-        0.0f, 1.0f, 0.0f, 0.8f ,0.0f ,0.0f,
+        -0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
+        0.5f, -0.5f, 0.5f, 0.809f, 0.5f,
+        0.0f, 0.5f, 0.0f, 1.0f, 0.0f,
 
-        0.5f, 0.0f, 0.5f, 0.0f ,0.8f ,0.0f,
-        0.5f, 0.0f, -0.5f, 0.0f ,0.8f ,0.0f,
-        0.0f, 1.0f, 0.0f, 0.0f ,0.8f ,0.0f,
+        0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
+        0.5f, -0.5f, -0.5f, 0.191f, 0.5f,
+        0.0f, 0.5f, 0.0f, 0.0f, 0.0f,
 
-        0.5f, 0.0f, -0.5f, 0.0f ,0.0f ,0.8f,
-        -0.5f, 0.0f, -0.5f, 0.0f ,0.0f ,0.8f,
-        0.0f, 1.0f, 0.0f, 0.0f ,0.0f ,0.8f,
+        0.5f, -0.5f, -0.5f, 0.5f, 0.809f,
+        -0.5f, -0.5f, -0.5f, 0.809f, 0.5f, 
+        0.0f, 0.5f, 0.0f, 1.0f, 1.0f,
 
-        -0.5f, 0.0f, -0.5f, 0.2f ,0.2f ,0.0f,
-        -0.5f, 0.0f, 0.5f, 0.2f ,0.2f ,0.0f,
-        0.0f, 1.0f, 0.0f, 0.2f ,0.2f ,0.0f,
+        -0.5f, -0.5f, -0.5f, 0.191f, 0.5f,
+        -0.5f, -0.5f, 0.5f, 0.5f, 0.809f,
+        0.0f, 0.5f, 0.0f, 0.0f, 1.0f,
 
-        0.5f, 0.0f, -0.5f, 0.0f ,0.4f ,0.4f,
-        0.5f, 0.0f, 0.5f, 0.0f ,0.4f ,0.4f,
-        -0.5f, 0.0f, 0.5f, 0.0f ,0.4f ,0.4f,
+        0.5f, -0.5f, -0.5f, 0.5f, 0.191f,
+        0.5f, -0.5f, 0.5f, 0.191f, 0.5f,
+        -0.5f, -0.5f, 0.5f, 0.5f, 0.809f,
         
-        -0.5f, 0.0f, 0.5f, 0.0f ,0.4f ,0.4f,
-        -0.5f, 0.0f, -0.5f, 0.0f ,0.4f ,0.4f,
-        0.5f, 0.0f, -0.5f, 0.0f ,0.4f ,0.4f
+        -0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
+        -0.5f, -0.5f, -0.5f, 0.191f, 0.5f,
+        0.5f, -0.5f, -0.5f, 0.5f, 0.809f 
         
     };
 
-    float strength = 1.5f; 
-    float color[3] = {1.0f, 1.0f, 1.0f};
 
     auto [w, h] = frame_buffer_size();
 
@@ -88,15 +88,6 @@ void SimpleShapeApplication::init() {
     glBufferData(GL_ARRAY_BUFFER, pyramidVertices.size() * sizeof(GLfloat), pyramidVertices.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-    // Create buffer for colour and strenght
-    GLuint v_buffer_color_strenght;
-    glGenBuffers(1, &v_buffer_color_strenght);
-    OGL_CALL(glBindBuffer(GL_UNIFORM_BUFFER, v_buffer_color_strenght));
-    glBufferData(GL_UNIFORM_BUFFER, 8 * sizeof(float), nullptr, GL_STATIC_DRAW);
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(float), &strength);
-    glBufferSubData(GL_UNIFORM_BUFFER, 16, 3 * sizeof(float), &color);
-    glBindBuffer(GL_UNIFORM_BUFFER, 0);
-
     // Create and bind the uniform buffer for Transformations interface block
     glGenBuffers(1, &v_buffer_transformation);
     OGL_CALL(glBindBuffer(GL_UNIFORM_BUFFER, v_buffer_transformation));
@@ -104,19 +95,55 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
 
+    // Load texture
+    stbi_set_flip_vertically_on_load(true);
+    GLint width, height, channels;
+    auto texture_file = std::string(ROOT_DIR) + "/Models/multicolor.png";
+    auto img = stbi_load(texture_file.c_str(), &width, &height, &channels, 0);
+
+    shader_ = program;
+    GLuint texture;
+    glGenTextures(1, &texture);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, img);
+
+    glBindTexture(GL_TEXTURE_2D, 0);
+    uniform_map_Kd_location_ = glGetUniformLocation(shader_, "map_Kd");
+
+    glm::vec4 Kd = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f); 
+    GLboolean is_textures_exist = GL_FALSE;
+
+    if (texture > 0) {
+        OGL_CALL(glUniform1i(uniform_map_Kd_location_, 0));
+        is_textures_exist = GL_TRUE;
+    }
+
+    glGenBuffers(1, &texture_buffer);
+
+    glBindBuffer(GL_UNIFORM_BUFFER, texture_buffer);
+    glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::vec4) + sizeof(GLboolean), nullptr, GL_STATIC_DRAW);
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::vec4), &Kd);
+    glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::vec4), sizeof(GLboolean), &is_textures_exist);
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
     glGenVertexArrays(1, &vao_pyramid_);
     glBindVertexArray(vao_pyramid_);
-    glBindBufferBase(GL_UNIFORM_BUFFER, 0, v_buffer_color_strenght);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 2, texture_buffer);
     glBindBufferBase(GL_UNIFORM_BUFFER, 1, v_buffer_transformation);
 
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_pyramid);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), reinterpret_cast<GLvoid*>(0));
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(0));
 
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), reinterpret_cast<GLvoid*>(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<GLvoid *>(3 * sizeof(GLfloat)));
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, v_buffer_indices);
+    glBindTexture(GL_TEXTURE_2D, texture);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 

@@ -1,14 +1,20 @@
-#version 420
-
-layout(std140, binding = 0) uniform Modifier {
- float strength;
- vec3  color; 
-};
-
-in vec3 vColor;
+#version 430
 
 layout(location=0) out vec4 vFragColor;
 
+layout(std140, binding = 2) uniform Modifier {
+    vec4 Kd;
+    bool use_map_Kd;
+};
+
+in vec2 vertex_texcoords;
+
+uniform sampler2D map_Kd;
+
 void main() {
-    vFragColor = vec4(vColor * color * strength, 1.0);
+    if (use_map_Kd) {
+        vFragColor = Kd*texture(map_Kd, vertex_texcoords);
+    } else {
+        vFragColor = Kd;
+    }
 }

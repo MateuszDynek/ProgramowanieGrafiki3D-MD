@@ -36,7 +36,9 @@ private:
     glm::mat4 model;
     GLuint v_buffer_transformation;
     CameraControler *controler_;
-
+    GLuint texture_buffer = 0u;
+    GLint  uniform_map_Kd_location_ = 0;
+    GLuint shader_;
     void framebuffer_resize_callback(int w, int h) override;
 
     void scroll_callback(double xoffset, double yoffset) override;
