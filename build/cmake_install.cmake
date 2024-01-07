@@ -119,6 +119,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/MeshesMaterials/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Textures/cmake_install.cmake")
 endif()
 

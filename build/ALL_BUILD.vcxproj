@@ -189,6 +189,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{7BB1632E-4839-3EDE-B29D-B0C9157A9B92}</Project>
       <Name>Indices</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\MeshesMaterials\MeshesMaterials.vcxproj">
+      <Project>{D3D45275-3145-3B99-A071-0A24730B0C01}</Project>
+      <Name>MeshesMaterials</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\PVM\PVM.vcxproj">
       <Project>{D957553F-48A2-3858-83B1-635D49861DFF}</Project>
       <Name>PVM</Name>

@@ -12,6 +12,7 @@
 #include "glad/gl.h"
 #include "camera.h"
 #include "camera_controler.h"
+#include "XeEngine/ColorMaterial.h"
 
 class SimpleShapeApplication : public xe::Application
 {

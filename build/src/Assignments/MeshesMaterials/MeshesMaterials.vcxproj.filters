@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\MeshesMaterials\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\MeshesMaterials\app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\MeshesMaterials\app.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\Assignments\MeshesMaterials\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\glad.dir\$(Configuration)\gl.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D238DAE9-B2BB-3C42-A87E-5B4DA43014A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{500021D7-3CC0-3416-82C2-F7FEEB86DBE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4AFDDAE0-61A6-3B21-986C-93FFB738855F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

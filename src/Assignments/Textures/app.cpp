@@ -14,6 +14,9 @@
 #include "glm/gtc/matrix_transform.hpp"
 
 #include "Application/utils.h"
+#include "XeEngine/Mesh.h"
+#include "XeEngine/mesh_loader.h"
+#include "XeEngine/ColorMaterial.h"
 
 void SimpleShapeApplication::init() {
     set_camera(new Camera);
