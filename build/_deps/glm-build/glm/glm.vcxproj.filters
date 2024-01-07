@@ -1173,6 +1173,9 @@
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\normalize_dot.hpp">
       <Filter>GTX Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\number_precision.hpp">
+      <Filter>GTX Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\optimum_pow.hpp">
       <Filter>GTX Files</Filter>
     </ClInclude>

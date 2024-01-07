@@ -665,6 +665,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\norm.hpp" />
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\normal.hpp" />
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\normalize_dot.hpp" />
+    <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\number_precision.hpp" />
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\optimum_pow.hpp" />
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\orthonormalize.hpp" />
     <ClInclude Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src\glm\gtx\pca.hpp" />
