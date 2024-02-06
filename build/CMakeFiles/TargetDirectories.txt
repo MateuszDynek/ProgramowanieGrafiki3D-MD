@@ -63,3 +63,6 @@ C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/MeshesM
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Textures/CMakeFiles/Textures.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Textures/CMakeFiles/INSTALL.dir
 C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Textures/CMakeFiles/ALL_BUILD.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Phong/CMakeFiles/Phong.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Phong/CMakeFiles/INSTALL.dir
+C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d/build/src/Assignments/Phong/CMakeFiles/ALL_BUILD.dir

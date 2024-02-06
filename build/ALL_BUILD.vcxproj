@@ -197,6 +197,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{D957553F-48A2-3858-83B1-635D49861DFF}</Project>
       <Name>PVM</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Phong\Phong.vcxproj">
+      <Project>{833A4069-3481-33C1-A629-E9897B73F339}</Project>
+      <Name>Phong</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\src\Assignments\Pyramid\Pyramid.vcxproj">
       <Project>{3318A993-0BEF-3939-AAB8-C2CF828F0D11}</Project>
       <Name>Pyramid</Name>
