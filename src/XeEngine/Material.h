@@ -10,7 +10,6 @@
 
 namespace xe {
 
-
     class Material {
     public:
 

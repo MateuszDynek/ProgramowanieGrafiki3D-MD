@@ -28,7 +28,7 @@ namespace {
 namespace xe {
 
 
-    std::shared_ptr<Mesh> load_mesh_from_obj(std::string path, std::string mtl_dir) {
+    Mesh* load_mesh_from_obj(std::string path, std::string mtl_dir) {
 
         auto smesh = xe::load_smesh_from_obj(path, mtl_dir);
         if (smesh.vertex_coords.empty())
@@ -118,7 +118,7 @@ namespace xe {
             }
 
         }
-        return std::shared_ptr<Mesh>(mesh);
+        return mesh;
 
 
     }

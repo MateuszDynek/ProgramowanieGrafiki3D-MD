@@ -32,6 +32,9 @@ void SimpleShapeApplication::init() {
         exit(-1);
     }
 
+	xe::ColorMaterial::init();
+	pyramid = xe::load_mesh_from_obj(std::string(ROOT_DIR) + "/Models/blue_marble.obj", std::string(ROOT_DIR) + "/Models");
+
     // All pyramid vertices with color (RGB)
     std::vector<GLfloat> pyramidVertices = {
         -0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
@@ -173,6 +176,8 @@ void SimpleShapeApplication::frame() {
     glEnable(GL_CULL_FACE);
     glDrawElements(GL_TRIANGLES, 18, GL_UNSIGNED_SHORT, reinterpret_cast<GLvoid *>(0));
     glBindVertexArray(0);
+
+	pyramid->draw();
 }
 void SimpleShapeApplication::framebuffer_resize_callback(int w, int h) {
     Application::framebuffer_resize_callback(w, h);

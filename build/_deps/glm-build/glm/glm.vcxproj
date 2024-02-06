@@ -82,19 +82,23 @@
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -113,21 +117,25 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -146,21 +154,25 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -180,19 +192,23 @@
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR="C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ROOT_DIR=\"C:/Users/m.dynek/Documents/Repo/Programowanie3D/3d\";XE_DEBUG;MAJOR=4;MINOR=6;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\src\3rdParty\glad\glad_4_6\glad\include;C:\Users\m.dynek\Documents\Repo\Programowanie3D\3d\build\_deps\glm-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>

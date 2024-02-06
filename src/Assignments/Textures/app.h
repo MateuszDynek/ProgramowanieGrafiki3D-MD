@@ -12,6 +12,8 @@
 #include "glad/gl.h"
 #include "camera.h"
 #include "camera_controler.h"
+#include "XeEngine/Mesh.h"
+#include "XeEngine/mesh_loader.h"
 #include "XeEngine/ColorMaterial.h"
 
 class SimpleShapeApplication : public xe::Application
@@ -40,6 +42,7 @@ private:
     GLuint texture_buffer = 0u;
     GLint  uniform_map_Kd_location_ = 0;
     GLuint shader_;
+	xe::Mesh *pyramid;
     void framebuffer_resize_callback(int w, int h) override;
 
     void scroll_callback(double xoffset, double yoffset) override;
