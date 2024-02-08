@@ -15,6 +15,7 @@
 #include "XeEngine/Mesh.h"
 #include "XeEngine/mesh_loader.h"
 #include "XeEngine/ColorMaterial.h"
+#include "XeEngine/lights.h"
 
 class SimpleShapeApplication : public xe::Application
 {
@@ -33,6 +34,14 @@ public:
         }
     }
 
+	void add_light(const xe::PointLight &p_light) {
+        p_lights_.push_back(p_light);
+    }
+
+    void add_ambient(glm::vec3 ambient) {
+        ambient_ = ambient;
+    }
+
 private:
     GLuint vao_pyramid_;
     Camera *camera_;
@@ -42,7 +51,7 @@ private:
     GLuint texture_buffer = 0u;
     GLint  uniform_map_Kd_location_ = 0;
     GLuint shader_;
-	xe::Mesh *pyramid;
+	xe::Mesh *mesh;
     void framebuffer_resize_callback(int w, int h) override;
 
     void scroll_callback(double xoffset, double yoffset) override;
@@ -52,4 +61,10 @@ private:
     void mouse_button_callback(int button, int action, int mods) override;
 
     void cursor_position_callback(double x, double y) override;
+
+    GLuint transform_p;
+    GLuint light_p;
+
+    glm::vec3 ambient_;
+    std::vector<xe::PointLight> p_lights_;
 };

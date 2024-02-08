@@ -6,7 +6,8 @@
 
 #include "glm/glm.hpp"
 
-struct PointLight {
+namespace xe{
+	struct PointLight {
     PointLight() = default;
 
     PointLight(const glm::vec3 &pos, const glm::vec3 &color, const glm::vec3 &atn) : position_in_world_space(pos),
@@ -17,3 +18,4 @@ struct PointLight {
     alignas(16) glm::vec3 color;
     alignas(16) glm::vec3 atn;
 };
+}

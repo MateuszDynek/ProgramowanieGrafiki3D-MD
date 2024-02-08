@@ -13,6 +13,7 @@ namespace xe {
     GLuint PhongMaterial::shader_ = 0u;
     GLuint PhongMaterial::material_uniform_buffer_ = 0u;
     GLint  PhongMaterial::uniform_map_Kd_location_ = 0;
+	GLint  PhongMaterial::uniform_ambient_location_ = 0;
 
     void PhongMaterial::bind() {
         glUseProgram(program());
@@ -25,9 +26,11 @@ namespace xe {
         }
         OGL_CALL(glBindBufferBase(GL_UNIFORM_BUFFER, 0, material_uniform_buffer_));
 
-        glBindBuffer(GL_UNIFORM_BUFFER, material_uniform_buffer_);
-        glBufferSubData(GL_UNIFORM_BUFFER, 4* sizeof(float), sizeof(glm::vec4), &Kd_[0]);
-        glBufferSubData(GL_UNIFORM_BUFFER, 15 * sizeof(float), sizeof(GLint), &use_map_Kd);
+        glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::vec4), &Kd_[0]);
+        glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::vec4), sizeof(glm::vec3), &Ks_[0]);
+        glBufferSubData(GL_UNIFORM_BUFFER, 2 * sizeof(glm::vec4), sizeof(glm::vec4), &Ka_[0]);
+        glBufferSubData(GL_UNIFORM_BUFFER, 3 * sizeof(glm::vec4), sizeof(GLint), &use_map_Kd);
+        glBufferSubData(GL_UNIFORM_BUFFER, 3 * sizeof(glm::vec4) + sizeof(float), sizeof(GLfloat), &Ns);
         OGL_CALL(glBindBuffer(GL_UNIFORM_BUFFER, 0u));
 
     }
@@ -75,6 +78,10 @@ namespace xe {
         uniform_map_Kd_location_ = glGetUniformLocation(shader_, "map_Kd");
         if (uniform_map_Kd_location_ == -1) {
             spdlog::warn("Cannot get uniform {} location", "map_Kd");
+        }
+		uniform_ambient_location_ = glGetUniformLocation(shader_, "ambient_light");
+        if (uniform_ambient_location_ == -1) {
+			spdlog::warn("Cannot get uniform {} location", "ambient_light");
         }
 
     }

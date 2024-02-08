@@ -17,6 +17,13 @@
 #include "XeEngine/Mesh.h"
 #include "XeEngine/mesh_loader.h"
 #include "XeEngine/ColorMaterial.h"
+#include "XeEngine/PhongMaterial.h"
+#include "XeEngine/lights.h"
+
+struct AllLights {
+    xe::PointLight light[24];
+    int num_lights;
+};
 
 void SimpleShapeApplication::init() {
     set_camera(new Camera);
@@ -31,43 +38,14 @@ void SimpleShapeApplication::init() {
         std::cerr << "Invalid program" << std::endl;
         exit(-1);
     }
-
 	xe::ColorMaterial::init();
-	pyramid = xe::load_mesh_from_obj(std::string(ROOT_DIR) + "/Models/blue_marble.obj", std::string(ROOT_DIR) + "/Models");
-
-    // All pyramid vertices with color (RGB)
-    std::vector<GLfloat> pyramidVertices = {
-        -0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
-        0.5f, -0.5f, 0.5f, 0.809f, 0.5f,
-        0.0f, 0.5f, 0.0f, 1.0f, 0.0f,
-
-        0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
-        0.5f, -0.5f, -0.5f, 0.191f, 0.5f,
-        0.0f, 0.5f, 0.0f, 0.0f, 0.0f,
-
-        0.5f, -0.5f, -0.5f, 0.5f, 0.809f,
-        -0.5f, -0.5f, -0.5f, 0.809f, 0.5f, 
-        0.0f, 0.5f, 0.0f, 1.0f, 1.0f,
-
-        -0.5f, -0.5f, -0.5f, 0.191f, 0.5f,
-        -0.5f, -0.5f, 0.5f, 0.5f, 0.809f,
-        0.0f, 0.5f, 0.0f, 0.0f, 1.0f,
-
-        0.5f, -0.5f, -0.5f, 0.5f, 0.191f,
-        0.5f, -0.5f, 0.5f, 0.191f, 0.5f,
-        -0.5f, -0.5f, 0.5f, 0.5f, 0.809f,
-        
-        -0.5f, -0.5f, 0.5f, 0.5f, 0.191f,
-        -0.5f, -0.5f, -0.5f, 0.191f, 0.5f,
-        0.5f, -0.5f, -0.5f, 0.5f, 0.809f 
-        
-    };
+	xe::PhongMaterial::init();
+	mesh = xe::load_mesh_from_obj(std::string(ROOT_DIR) + "/Models/square.obj", std::string(ROOT_DIR) + "/Models");
 
 
     auto [w, h] = frame_buffer_size();
 
     model = glm::mat4(1.0f);
-    std::vector<GLushort> indices={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
 
     camera_->look_at(glm::vec3(-2.0f, -1.0f, -3.0f),
                      glm::vec3(0.0f, 0.0f, 0.0f),
@@ -79,77 +57,34 @@ void SimpleShapeApplication::init() {
     auto aspect = (float) w / h;
     camera_->perspective(fov, aspect, near, far);
 
-
-    // Generating the buffer and loading the pyramid indices data into it.
-    GLuint v_buffer_indices;
-    glGenBuffers(1, &v_buffer_indices);
-    OGL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, v_buffer_indices));
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-
-    // Generating the buffer and loading the pyramid vertex data into it.
-    GLuint v_buffer_pyramid;
-    glGenBuffers(1, &v_buffer_pyramid);
-    OGL_CALL(glBindBuffer(GL_ARRAY_BUFFER, v_buffer_pyramid));
-    glBufferData(GL_ARRAY_BUFFER, pyramidVertices.size() * sizeof(GLfloat), pyramidVertices.data(), GL_STATIC_DRAW);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
     // Create and bind the uniform buffer for Transformations interface block
     glGenBuffers(1, &v_buffer_transformation);
     OGL_CALL(glBindBuffer(GL_UNIFORM_BUFFER, v_buffer_transformation));
     glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), nullptr, GL_STATIC_DRAW); // Allocate 64 bytes for the mat4
+
+	glGenBuffers(1, &transform_p);
+    glBindBuffer(GL_UNIFORM_BUFFER, transform_p);
+    glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::mat4) + sizeof(glm::mat3), nullptr, GL_STATIC_DRAW);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 2, transform_p);
+
+    // Point Lights
+    add_light(*new xe::PointLight({ 0.2, 0.2, 0.4 }, { 1.0, 0.0, 0.1 }, { 1.0, 1.0, 1.0 }));
+    add_light(*new xe::PointLight({ -0.3, -0.2, 0.4 }, { 0.1, 1.0, 0.0 }, { 1.0, 1.0, 1.0 }));
+    add_light(*new xe::PointLight({ 0.2, -0.2, 0.4 }, { 0.0, 0.0, 1.0 }, { 1.0, 1.0, 1.0 }));
+    xe::PhongMaterial::set_ambient({ 0.2f, 0.2f, 0.2f });
+
+	glGenBuffers(1, &light_p);
+    glBindBuffer(GL_UNIFORM_BUFFER, light_p);
+    glBufferData(GL_UNIFORM_BUFFER,sizeof(AllLights), nullptr, GL_STATIC_DRAW);
+	
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
-
-    // Load texture
-    stbi_set_flip_vertically_on_load(true);
-    GLint width, height, channels;
-    auto texture_file = std::string(ROOT_DIR) + "/Models/multicolor.png";
-    auto img = stbi_load(texture_file.c_str(), &width, &height, &channels, 0);
-
-    shader_ = program;
-    GLuint texture;
-    glGenTextures(1, &texture);
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture);
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, img);
-
-    glBindTexture(GL_TEXTURE_2D, 0);
-    uniform_map_Kd_location_ = glGetUniformLocation(shader_, "map_Kd");
-
-    glm::vec4 Kd = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f); 
-    GLboolean is_textures_exist = GL_FALSE;
-
-    if (texture > 0) {
-        OGL_CALL(glUniform1i(uniform_map_Kd_location_, 0));
-        is_textures_exist = GL_TRUE;
-    }
-
-    glGenBuffers(1, &texture_buffer);
-
-    glBindBuffer(GL_UNIFORM_BUFFER, texture_buffer);
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(glm::vec4) + sizeof(GLboolean), nullptr, GL_STATIC_DRAW);
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::vec4), &Kd);
-    glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::vec4), sizeof(GLboolean), &is_textures_exist);
-    glBindBuffer(GL_UNIFORM_BUFFER, 0);
     glGenVertexArrays(1, &vao_pyramid_);
     glBindVertexArray(vao_pyramid_);
-    glBindBufferBase(GL_UNIFORM_BUFFER, 2, texture_buffer);
     glBindBufferBase(GL_UNIFORM_BUFFER, 1, v_buffer_transformation);
+	glBindBufferBase(GL_UNIFORM_BUFFER, 3, light_p);
+    glBindBuffer(GL_UNIFORM_BUFFER, light_p);
 
-    glBindBuffer(GL_ARRAY_BUFFER, v_buffer_pyramid);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), reinterpret_cast<GLvoid*>(0));
-    glEnableVertexAttribArray(0);
-
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), reinterpret_cast<GLvoid*>(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, v_buffer_indices);
-    glBindTexture(GL_TEXTURE_2D, texture);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
@@ -166,18 +101,31 @@ void SimpleShapeApplication::init() {
 }
 
 void SimpleShapeApplication::frame() {
+	auto VM = camera_->view() * glm::mat4(1.0f);
+    auto R = glm::mat3(VM);
+    auto N = glm::mat3(glm::cross(R[1], R[2]), glm::cross(R[2], R[0]), glm::cross(R[0], R[1]));
+
+    glBindBuffer(GL_UNIFORM_BUFFER, transform_p);
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(VM), &VM);
+    glBufferSubData(GL_UNIFORM_BUFFER, sizeof(VM), sizeof(N), &N);
+
+    glBindBuffer(GL_UNIFORM_BUFFER, light_p);
+    AllLights all_lights{};
+    all_lights.num_lights = p_lights_.size();
+
+    for(int i = 0; i < all_lights.num_lights; i++) all_lights.light[i] = p_lights_[i];
+
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(AllLights), &all_lights);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
     auto pvm = camera_->projection() * camera_->view() * model;
     glBindBuffer(GL_UNIFORM_BUFFER, v_buffer_transformation);
     glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &pvm[0]);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
-    glBindVertexArray(vao_pyramid_);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
-    glDrawElements(GL_TRIANGLES, 18, GL_UNSIGNED_SHORT, reinterpret_cast<GLvoid *>(0));
     glBindVertexArray(0);
 
-	pyramid->draw();
+	mesh->draw();
 }
 void SimpleShapeApplication::framebuffer_resize_callback(int w, int h) {
     Application::framebuffer_resize_callback(w, h);
